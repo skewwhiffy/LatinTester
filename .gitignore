@@ -5,3 +5,7 @@ LatinTester/TestResults/
 LatinTesterTest/bin/
 LatinTesterTest/obj/
 LatinTesterTest/TestResults/
+TestResults/
+*.suo
+*.user
+_Resharper*

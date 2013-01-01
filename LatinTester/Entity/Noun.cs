@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using LatinTester.Enum;
 
 namespace LatinTester.Entity
 {
   public abstract class Noun
   {
+    public string English { get; set; }
+
+    public NounPrincipalParts PrincipalParts
+    {
+      get { return new NounPrincipalParts(Get(Case.Nominative, Number.Singular), Get(Case.Genitive, Number.Singular)); }
+    }
+
     public string Get(Case nounCase, Number number)
     {
       if (Overrides.ContainsKey(nounCase) && Overrides[nounCase].ContainsKey(number))
@@ -16,6 +24,7 @@ namespace LatinTester.Entity
 
     public void Override(Case nounCase, Number number, String value)
     {
+      value = value.ToLowerInvariant();
       if (value == GetRegular(nounCase, number))
       {
         DeleteOverride(nounCase, number);

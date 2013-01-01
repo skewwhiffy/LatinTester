@@ -50,7 +50,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Entity\NounDeclension3Test.cs" />
+    <Compile Include="Entity\NounDeclension2Test.cs" />
     <Compile Include="Entity\NounDeclension1Test.cs" />
+    <Compile Include="Entity\NounDeclensionTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -61,11 +61,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Entity\Case.cs" />
-    <Compile Include="Entity\Gender.cs" />
+    <Compile Include="Enum\Case.cs" />
+    <Compile Include="Entity\NounDeclension2.cs" />
+    <Compile Include="Enum\Gender.cs" />
     <Compile Include="Entity\Noun.cs" />
     <Compile Include="Entity\NounDeclension1.cs" />
-    <Compile Include="Entity\Number.cs" />
+    <Compile Include="Entity\NounDeclension3.cs" />
+    <Compile Include="Entity\NounPrincipalParts.cs" />
+    <Compile Include="Enum\Number.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -97,6 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CsharpUtils\csharpUtils\CsharpUtils\CsharpUtils.csproj">
+      <Project>{a205e458-f988-4997-ae62-0a6f2ca653dd}</Project>
+      <Name>CsharpUtils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
