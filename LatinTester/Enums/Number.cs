@@ -1,4 +1,4 @@
-﻿namespace LatinTester.Enum
+﻿namespace LatinTester.Enums
 {
   public enum Number
   {

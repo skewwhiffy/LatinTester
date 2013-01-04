@@ -53,7 +53,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Repository\NounRepository.cs" />
+    <Page Include="NounCaseTester.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -61,16 +62,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Enum\Case.cs" />
+    <Compile Include="Entity\NounDeclension5.cs" />
+    <Compile Include="Entity\NounDeclension4.cs" />
+    <Compile Include="Entity\NounTestQuestion.cs" />
+    <Compile Include="Enums\Case.cs" />
     <Compile Include="Entity\NounDeclension2.cs" />
-    <Compile Include="Enum\Gender.cs" />
+    <Compile Include="Enums\Gender.cs" />
     <Compile Include="Entity\Noun.cs" />
     <Compile Include="Entity\NounDeclension1.cs" />
     <Compile Include="Entity\NounDeclension3.cs" />
     <Compile Include="Entity\NounPrincipalParts.cs" />
-    <Compile Include="Enum\Number.cs" />
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Enums\Number.cs" />
+    <Compile Include="NounCaseTester.xaml.cs">
+      <DependentUpon>NounCaseTester.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

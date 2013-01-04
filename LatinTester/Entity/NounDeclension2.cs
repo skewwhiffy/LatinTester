@@ -1,6 +1,6 @@
 ﻿using System;
 using CsharpUtils;
-using LatinTester.Enum;
+using LatinTester.Enums;
 
 namespace LatinTester.Entity
 {

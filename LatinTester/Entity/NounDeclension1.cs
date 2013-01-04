@@ -1,5 +1,5 @@
 ﻿using System;
-using LatinTester.Enum;
+using LatinTester.Enums;
 
 namespace LatinTester.Entity
 {

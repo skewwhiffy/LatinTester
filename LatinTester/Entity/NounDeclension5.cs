@@ -1,39 +1,35 @@
 ﻿using System;
 using System.IO;
-using CsharpUtils;
 using LatinTester.Enums;
 
 namespace LatinTester.Entity
 {
-  public class NounDeclension3 : Noun
+  public class NounDeclension5 : Noun
   {
-    public NounDeclension3(NounPrincipalParts principalParts, string english, Gender gender, bool iStem)
+    public NounDeclension5(NounPrincipalParts principalParts, string english, Gender gender = Gender.Feminine)
     {
-      if (!principalParts.GenitiveSingular.EndsWith("is"))
+      if (!principalParts.GenitiveSingular.EndsWith("ei"))
       {
-        throw new NotImplementedException("Third declension nouns in genitive singular not ending in -IS not implemented");
+        throw new NotImplementedException("Fifth declension noun with genitive singular not ending in -EI not supported");
+      }
+      if (!principalParts.NominativeSingular.EndsWith("es"))
+      {
+        throw new NotImplementedException("Fifth declension noun with nominative singular not ending in -ES not supported");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
-      _english = english;
+      if (_stem != principalParts.NominativeSingular.Substring(0, principalParts.NominativeSingular.Length - 2))
+      {
+        throw new NotImplementedException("Fifth declension noun has different stem in nominative and genitive singular");
+      }
       _gender = gender;
-      _iStem = iStem;
-      _nominativeSingular = principalParts.NominativeSingular;
+      English = english;
     }
 
     private readonly Gender _gender;
-    private readonly string _nominativeSingular;
     private readonly string _stem;
-    private readonly string _english;
-    private readonly bool _iStem;
 
     protected override string GetRegular(Case nounCase, Number number)
     {
-      if (number == Number.Singular &&
-        ((nounCase.IsOneOf(Case.Nominative, Case.Vocative))
-          || (nounCase == Case.Accusative && Gender == Gender.Neuter)))
-      {
-        return _nominativeSingular;
-      }
       return string.Format("{0}{1}", _stem, GetEnding(nounCase, number));
     }
 
@@ -44,12 +40,15 @@ namespace LatinTester.Entity
         case Number.Singular:
           switch (nounCase)
           {
+            case Case.Nominative:
+            case Case.Vocative:
+              return "es";
             case Case.Accusative:
               return "em";
             case Case.Genitive:
-              return "is";
+              return "ei";
             case Case.Dative:
-              return "i";
+              return "ei";
             case Case.Ablative:
               return "e";
             default:
@@ -61,24 +60,12 @@ namespace LatinTester.Entity
             case Case.Nominative:
             case Case.Vocative:
             case Case.Accusative:
-              if (Gender == Gender.Neuter)
-              {
-                if (_iStem)
-                {
-                  return "ia";
-                }
-                return "a";
-              }
               return "es";
             case Case.Genitive:
-              if (_iStem)
-              {
-                return "ium";
-              }
-              return "um";
+              return "erum";
             case Case.Dative:
             case Case.Ablative:
-              return "ibus";
+              return "ebus";
             default:
               throw new NotImplementedException();
           }
