@@ -2,7 +2,7 @@
 using CsharpUtils;
 using LatinTester.Enums;
 
-namespace LatinTester.Entity
+namespace LatinTester.Entities
 {
   public class NounDeclension2 : Noun
   {

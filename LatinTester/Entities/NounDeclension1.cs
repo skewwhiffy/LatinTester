@@ -1,7 +1,7 @@
 ﻿using System;
 using LatinTester.Enums;
 
-namespace LatinTester.Entity
+namespace LatinTester.Entities
 {
   public class NounDeclension1 : Noun
   {

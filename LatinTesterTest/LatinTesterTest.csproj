@@ -50,15 +50,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Entity\NounDeclension5Test.cs" />
-    <Compile Include="Entity\NounDeclension4Test.cs" />
-    <Compile Include="Entity\NounDeclension3Test.cs" />
-    <Compile Include="Entity\NounDeclension2Test.cs" />
-    <Compile Include="Entity\NounDeclension1Test.cs" />
-    <Compile Include="Entity\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\NounDeclension5Test.cs" />
+    <Compile Include="Entities\NounDeclension4Test.cs" />
+    <Compile Include="Entities\NounDeclension3Test.cs" />
+    <Compile Include="Entities\NounDeclension2Test.cs" />
+    <Compile Include="Entities\NounDeclension1Test.cs" />
+    <Compile Include="Entities\NounDeclensionTestBase.cs" />
+    <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CsharpUtils\csharpUtils\CsharpUtils\CsharpUtils.csproj">
+      <Project>{a205e458-f988-4997-ae62-0a6f2ca653dd}</Project>
+      <Name>CsharpUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LatinTester\LatinTester.csproj">
       <Project>{5ae6f3ba-7eda-4534-a806-d6353104c165}</Project>
       <Name>LatinTester</Name>

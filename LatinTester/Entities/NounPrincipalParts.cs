@@ -1,4 +1,4 @@
-﻿namespace LatinTester.Entity
+﻿namespace LatinTester.Entities
 {
   public class NounPrincipalParts
   {
@@ -30,6 +30,11 @@
       {
         return ((NominativeSingular != null ? NominativeSingular.GetHashCode() : 0) * 397) ^ (GenitiveSingular != null ? GenitiveSingular.GetHashCode() : 0);
       }
+    }
+
+    public override string ToString()
+    {
+      return string.Format("{0}, {1}", NominativeSingular, GenitiveSingular);
     }
   }
 }

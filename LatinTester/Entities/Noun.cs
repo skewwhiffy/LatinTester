@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using LatinTester.Enums;
+using LatinTester.Helpers;
 
-namespace LatinTester.Entity
+namespace LatinTester.Entities
 {
   public abstract class Noun
   {
@@ -54,6 +55,11 @@ namespace LatinTester.Entity
     protected Dictionary<Case, Dictionary<Number, string>> Overrides
     {
       get { return _overrides; }
+    }
+
+    public override string ToString()
+    {
+      return string.Format("{0}, {1}, '{2}'", PrincipalParts, Gender.ToShortString(), English);
     }
   }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using LatinTester.Entity;
+using LatinTester.Entities;
 using LatinTester.Enums;
 
 namespace LatinTester.Repository
@@ -62,15 +62,132 @@ namespace LatinTester.Repository
 
     private static void SetUpNouns() // QQ load from disk
     {
+      //SetUpNouns1();
+      //SetUpNouns2();
+      SetUpNouns3();
+    }
+
+    private static void SetUpNouns1()
+    {
+      /*
+       * aqua
+       * causa
+       * cena
+       * copiae
+       * cura
+       * femina
+       * filia
+       * hora
+       * ianua
+       * luna
+       * nauta
+       * pecunia
+       * provincia
+       * Roma
+       * terra
+       * turba
+       * via
+       * victoria
+       * villa
+       * vita
+       */
       _ones.Add(New1("puella", "puellae", "girl"));
-      _threes.Add(New3("comes", "comitis", "comrade", Gender.Masculine, false));
+    }
+
+    private static void SetUpNouns2()
+    {
+      /*
+       * QQ Probably more
+       * ager agri
+       * amicus
+       * animus
+       * annus
+       * aurum
+       * bellum
+       * castra castrorum
+       * cibus
+       * consilium
+       * deus
+       * filius
+       * forum
+       * imperium
+       * legatus
+       * locus
+       * modus
+       * negotium
+       * numerus
+       * oculus
+       * officium
+       * oppidum
+       * proelium
+       * servus
+       * signum
+       * templum
+       * verbum
+       * vir viri
+       */
+    }
+
+    private static void SetUpNouns3()
+    {
+      /*
+       * civis civis
+       * clamor clamoris
+       * comes comitis
+       * consul consulis
+       * dux ducis
+       * eques equitis
+       * frater fratris
+       * homo hominis
+       * honor honoris
+       * hospes hospitis
+       * hostis hostis
+       * ignis ignis
+       * iudex iudicis
+       * iuvenis iuvenis
+       * opus operis
+       * pes pedis
+       * legio legionis
+       * lex legis
+       * libertas libertatis
+       * mare maris
+       * miles militis
+       * mors mortis
+       * mos moris
+       * multitudo multitudinis
+       * navis navis
+       * nomen nominis
+       * nox noctis
+       * os oris
+       * pater patris
+       * pax pacis
+       * pes pedis
+       * princeps principis
+       * rex regis
+       * sacerdos sacerdotis
+       * salus salutis
+       * sanguis sanguinis
+       * scelus sceleris
+       * senex senis
+       * sermo sermonis
+       * sol solis
+       * soror sororis
+       * tempus temporis
+       * urbs urbis
+       * uxor uxoris
+       * virtus virtutis
+       * vis viris
+       * vox vocis
+       */
+
       _threes.Add(New3("caput", "capitis", "head", Gender.Neuter, false));
+      _threes.Add(New3("civis", "civis", "citizen", Gender.Masculine, true));
+      _threes.Add(New3("comes", "comitis", "comrade", Gender.Masculine, false));
       _threes.Add(New3("iuvenis", "iuventis", "young man", Gender.Masculine, true));
+      _threes.Add(New3("ignis", "ignis", "fire", Gender.Feminine, true));
       _threes.Add(New3("iudex", "iudicis", "judge", Gender.Masculine, false));
       _threes.Add(New3("mors", "mortis", "death", Gender.Feminine, true));
       _threes.Add(New3("multitudo", "multitudinis", "crowd", Gender.Feminine, false));
-      _threes.Add(New3("civis", "civis", "citizen", Gender.Masculine, true));
-      _threes.Add(New3("ignis", "ignis", "fire", Gender.Feminine, true));
       _threes.Add(New3("os", "oris", "mouth", Gender.Neuter, false));
       _threes.Add(New3("sanguis", "sanguinis", "mouth", Gender.Masculine, false));
     }

@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entity;
-using LatinTester.Enum;
+using LatinTester.Entities;
+using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entity
+namespace LatinTesterTest.Entities
 {
   [TestClass]
   public class NounDeclension4Test : NounDeclensionTestBase
@@ -54,6 +54,7 @@ namespace LatinTesterTest.Entity
         Number.Plural,
         "portus");
       Assert.AreEqual(Gender.Masculine, _portus.Gender);
+      Assert.AreEqual("port", _portus.English);
     }
 
     #endregion
@@ -90,6 +91,7 @@ namespace LatinTesterTest.Entity
         Number.Plural,
         "cornu");
       Assert.AreEqual(Gender.Neuter, _cornu.Gender);
+      Assert.AreEqual("horn", _cornu.English);
     }
 
     #endregion

@@ -2,7 +2,7 @@
 using System.IO;
 using LatinTester.Enums;
 
-namespace LatinTester.Entity
+namespace LatinTester.Entities
 {
   public class NounDeclension5 : Noun
   {

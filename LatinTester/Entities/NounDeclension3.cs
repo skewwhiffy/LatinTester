@@ -3,7 +3,7 @@ using System.IO;
 using CsharpUtils;
 using LatinTester.Enums;
 
-namespace LatinTester.Entity
+namespace LatinTester.Entities
 {
   public class NounDeclension3 : Noun
   {
@@ -14,7 +14,7 @@ namespace LatinTester.Entity
         throw new NotImplementedException("Third declension nouns in genitive singular not ending in -IS not implemented");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
-      _english = english;
+      English = english;
       _gender = gender;
       _iStem = iStem;
       _nominativeSingular = principalParts.NominativeSingular;
@@ -23,7 +23,6 @@ namespace LatinTester.Entity
     private readonly Gender _gender;
     private readonly string _nominativeSingular;
     private readonly string _stem;
-    private readonly string _english;
     private readonly bool _iStem;
 
     protected override string GetRegular(Case nounCase, Number number)

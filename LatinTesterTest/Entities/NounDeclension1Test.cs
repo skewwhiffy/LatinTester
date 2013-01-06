@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entity;
-using LatinTester.Enum;
+using LatinTester.Entities;
+using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entity
+namespace LatinTesterTest.Entities
 {
   [TestClass]
   public class NounDeclension1Test : NounDeclensionTestBase
@@ -25,7 +25,7 @@ namespace LatinTesterTest.Entity
     #region Regular noun
 
     [TestMethod]
-    public void PuellaSingularWorks()
+    public void PuellaWorks()
     {
       NounWorks(
         _puella,
@@ -40,11 +40,6 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "puella");
-    }
-
-    [TestMethod]
-    public void PuellaPluralWorks()
-    {
       NounWorks(
         _puella,
         new Dictionary<Case, string>
@@ -58,20 +53,16 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "puella");
-    }
-
-    [TestMethod]
-    public void PuellaGenderWorks()
-    {
       Assert.AreEqual(Gender.Feminine, _puella.Gender);
+      Assert.AreEqual("girl", _puella.English);
     }
 
     #endregion
 
-    #region Irregular noun
+    #region Masculine noun
 
     [TestMethod]
-    public void CometesSingularWorks()
+    public void CometesWorks()
     {
       NounWorks(
         _cometes,
@@ -86,22 +77,10 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "cometes");
-    }
-
-    [TestMethod]
-    public void CometesGendersWork()
-    {
       Assert.AreEqual(Gender.Masculine, _cometes.Gender);
+      Assert.AreEqual("comet", _cometes.English);
     }
 
     #endregion
-
-    private void NounWorks(Noun noun, Dictionary<Case, string> expected, Number number, string nounName)
-    {
-      foreach (KeyValuePair<Case, string> kvp in expected)
-      {
-        Assert.AreEqual(kvp.Value, noun.Get(kvp.Key, number), "{0} {1} for {2} doesn't work", kvp.Key, number, nounName);
-      }
-    }
   }
 }

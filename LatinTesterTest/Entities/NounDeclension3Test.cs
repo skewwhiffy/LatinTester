@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entity;
-using LatinTester.Enum;
+using LatinTester.Entities;
+using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entity
+namespace LatinTesterTest.Entities
 {
   [TestClass]
   public class NounDeclension3Test : NounDeclensionTestBase
@@ -14,7 +14,6 @@ namespace LatinTesterTest.Entity
     private Noun _nomen;
     private Noun _nox;
     private Noun _animal;
-
 
     [TestInitialize]
     public void SetUp()
@@ -58,6 +57,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "homo");
+      Assert.AreEqual(Gender.Masculine, _homo.Gender);
+      Assert.AreEqual("man", _homo.English);
     }
 
     #endregion
@@ -93,6 +94,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "nomen");
+      Assert.AreEqual(Gender.Neuter, _nomen.Gender);
+      Assert.AreEqual("name", _nomen.English);
     }
 
     #endregion
@@ -128,7 +131,11 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "nox");
+      Assert.AreEqual(Gender.Feminine, _nox.Gender);
+      Assert.AreEqual("night", _nox.English);
     }
+
+    #endregion
 
     #region Neuter I stem
 
@@ -161,9 +168,9 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "animal");
+      Assert.AreEqual(Gender.Neuter, _animal.Gender);
+      Assert.AreEqual("animal", _animal.English);
     }
-
-    #endregion
 
     #endregion
   }

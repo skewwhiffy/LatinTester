@@ -53,6 +53,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Exceptions\GenderNotRecognizedException.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Repository\NounRepository.cs" />
     <Page Include="NounCaseTester.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -62,16 +64,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Entity\NounDeclension5.cs" />
-    <Compile Include="Entity\NounDeclension4.cs" />
-    <Compile Include="Entity\NounTestQuestion.cs" />
+    <Compile Include="Entities\NounDeclension5.cs" />
+    <Compile Include="Entities\NounDeclension4.cs" />
+    <Compile Include="Entities\NounTestQuestion.cs" />
     <Compile Include="Enums\Case.cs" />
-    <Compile Include="Entity\NounDeclension2.cs" />
+    <Compile Include="Entities\NounDeclension2.cs" />
     <Compile Include="Enums\Gender.cs" />
-    <Compile Include="Entity\Noun.cs" />
-    <Compile Include="Entity\NounDeclension1.cs" />
-    <Compile Include="Entity\NounDeclension3.cs" />
-    <Compile Include="Entity\NounPrincipalParts.cs" />
+    <Compile Include="Entities\Noun.cs" />
+    <Compile Include="Entities\NounDeclension1.cs" />
+    <Compile Include="Entities\NounDeclension3.cs" />
+    <Compile Include="Entities\NounPrincipalParts.cs" />
     <Compile Include="Enums\Number.cs" />
     <Compile Include="NounCaseTester.xaml.cs">
       <DependentUpon>NounCaseTester.xaml</DependentUpon>
@@ -111,6 +113,7 @@
       <Name>CsharpUtils</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

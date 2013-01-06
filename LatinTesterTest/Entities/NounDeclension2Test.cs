@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entity;
-using LatinTester.Enum;
+using LatinTester.Entities;
+using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entity
+namespace LatinTesterTest.Entities
 {
   [TestClass]
   public class NounDeclension2Test : NounDeclensionTestBase
@@ -29,7 +29,7 @@ namespace LatinTesterTest.Entity
     #region Regular masculine
 
     [TestMethod]
-    public void ServusWorksInSingular()
+    public void ServusWorks()
     {
       NounWorks(
         _servus,
@@ -44,11 +44,6 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "servus");
-    }
-
-    [TestMethod]
-    public void ServusWorksInPlural()
-    {
       NounWorks(
         _servus,
         new Dictionary<Case, string>
@@ -62,6 +57,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "servus");
+      Assert.AreEqual(Gender.Masculine, _servus.Gender);
+      Assert.AreEqual("slave", _servus.English);
     }
 
     [TestMethod]
@@ -75,7 +72,7 @@ namespace LatinTesterTest.Entity
     #region Regular masculine ending in -IUS
 
     [TestMethod]
-    public void FiliusWorksInSingular()
+    public void FiliusWorks()
     {
       NounWorks(
         _filius,
@@ -90,11 +87,6 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "filius");
-    }
-
-    [TestMethod]
-    public void FiliusWorksInPlural()
-    {
       NounWorks(
         _filius,
         new Dictionary<Case, string>
@@ -108,6 +100,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "filius");
+      Assert.AreEqual(Gender.Masculine, _filius.Gender);
+      Assert.AreEqual("son", _filius.English);
     }
 
     #endregion
@@ -115,7 +109,7 @@ namespace LatinTesterTest.Entity
     #region Regular masculine ending in -ER
 
     [TestMethod]
-    public void MagisterWorksInSingular()
+    public void MagisterWorks()
     {
       NounWorks(
         _magister,
@@ -130,11 +124,6 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "magister");
-    }
-
-    [TestMethod]
-    public void MagisterWorksInPlural()
-    {
       NounWorks(
         _magister,
         new Dictionary<Case, string>
@@ -148,6 +137,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "magister");
+      Assert.AreEqual(Gender.Masculine, _magister.Gender);
+      Assert.AreEqual("teacher", _magister.English);
     }
 
     #endregion
@@ -155,7 +146,7 @@ namespace LatinTesterTest.Entity
     #region Regular neuter
 
     [TestMethod]
-    public void BellumWorksInSingular()
+    public void BellumWorks()
     {
       NounWorks(
         _bellum,
@@ -170,11 +161,6 @@ namespace LatinTesterTest.Entity
           },
         Number.Singular,
         "bellum");
-    }
-
-    [TestMethod]
-    public void BellumWorksInPlural()
-    {
       NounWorks(
         _bellum,
         new Dictionary<Case, string>
@@ -188,12 +174,8 @@ namespace LatinTesterTest.Entity
           },
         Number.Plural,
         "bellum");
-    }
-
-    [TestMethod]
-    public void BellumGenderWorks()
-    {
       Assert.AreEqual(Gender.Neuter, _bellum.Gender);
+      Assert.AreEqual("war", _bellum.English);
     }
 
     #endregion

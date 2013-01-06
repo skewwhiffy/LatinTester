@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entity;
-using LatinTester.Enum;
+using LatinTester.Entities;
+using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entity
+namespace LatinTesterTest.Entities
 {
   [TestClass]
   public class NounDeclension5Test : NounDeclensionTestBase
@@ -23,7 +23,7 @@ namespace LatinTesterTest.Entity
     #region Regular feminine
 
     [TestMethod]
-    public void PortusWorks()
+    public void EffigiesWorks()
     {
       NounWorks(
         _effigies,
@@ -52,6 +52,7 @@ namespace LatinTesterTest.Entity
         Number.Plural,
         "effigies");
       Assert.AreEqual(Gender.Feminine, _effigies.Gender);
+      Assert.AreEqual("effigy", _effigies.English);
     }
 
     #endregion
