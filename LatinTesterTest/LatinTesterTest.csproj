@@ -50,12 +50,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Entities\NounDeclension5Test.cs" />
-    <Compile Include="Entities\NounDeclension4Test.cs" />
-    <Compile Include="Entities\NounDeclension3Test.cs" />
-    <Compile Include="Entities\NounDeclension2Test.cs" />
-    <Compile Include="Entities\NounDeclension1Test.cs" />
-    <Compile Include="Entities\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\Impl\NounDeclension5Test.cs" />
+    <Compile Include="Entities\Impl\NounDeclension4Test.cs" />
+    <Compile Include="Entities\Impl\NounDeclension3Test.cs" />
+    <Compile Include="Entities\Impl\NounDeclension2Test.cs" />
+    <Compile Include="Entities\Impl\NounDeclension1Test.cs" />
+    <Compile Include="Entities\Impl\Base\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationTestBase.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\PresentIndicativeActiveRegularTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

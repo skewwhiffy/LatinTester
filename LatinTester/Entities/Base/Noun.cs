@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 using LatinTester.Helpers;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Base
 {
   public abstract class Noun
   {

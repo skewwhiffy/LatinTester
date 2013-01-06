@@ -1,8 +1,10 @@
 ﻿using System;
 using CsharpUtils;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Impl
 {
   public class NounDeclension2 : Noun
   {
@@ -20,7 +22,7 @@ namespace LatinTester.Entities
       English = english;
       if (!principalParts.GenitiveSingular.EndsWith("i"))
       {
-        throw new NotImplementedException("Second declension nouns with genitive singular not ending in -I not implemented");
+        throw new NotSupportedException("Second declension nouns with genitive singular not ending in -I not implemented");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 1);
       _gender = gender;

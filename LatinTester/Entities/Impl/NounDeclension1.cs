@@ -1,7 +1,9 @@
 ﻿using System;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Impl
 {
   public class NounDeclension1 : Noun
   {
@@ -11,7 +13,7 @@ namespace LatinTester.Entities
       if (!principalParts.GenitiveSingular.EndsWith("ae"))
       {
         // This is actually a valid but rare case: see nymphe, nymphes
-        throw new NotImplementedException("First declension nouns with genitive singular not ending in -AE not implemented");
+        throw new NotSupportedException("First declension nouns with genitive singular not ending in -AE not implemented");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
       _gender = gender;

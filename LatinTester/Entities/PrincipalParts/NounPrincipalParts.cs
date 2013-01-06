@@ -1,4 +1,4 @@
-﻿namespace LatinTester.Entities
+﻿namespace LatinTester.Entities.PrincipalParts
 {
   public class NounPrincipalParts
   {
@@ -13,15 +13,24 @@
 
     public override bool Equals(object obj)
     {
-      if (ReferenceEquals(null, obj)) return false;
-      if (ReferenceEquals(this, obj)) return true;
-      if (obj.GetType() != GetType()) return false;
+      if (ReferenceEquals(null, obj))
+      {
+        return false;
+      }
+      if (ReferenceEquals(this, obj))
+      {
+        return true;
+      }
+      if (obj.GetType() != GetType())
+      {
+        return false;
+      }
       return Equals((NounPrincipalParts) obj);
     }
 
     protected bool Equals(NounPrincipalParts other)
     {
-      return string.Equals(NominativeSingular, other.NominativeSingular) && string.Equals(GenitiveSingular, other.GenitiveSingular);
+      return NominativeSingular == other.NominativeSingular && GenitiveSingular == other.GenitiveSingular;
     }
 
     public override int GetHashCode()

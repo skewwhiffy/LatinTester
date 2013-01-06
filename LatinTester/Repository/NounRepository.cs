@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using LatinTester.Entities;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.Impl;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
 namespace LatinTester.Repository

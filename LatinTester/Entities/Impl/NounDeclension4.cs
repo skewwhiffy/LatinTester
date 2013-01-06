@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Impl
 {
   public class NounDeclension4 : Noun
   {
@@ -15,7 +17,7 @@ namespace LatinTester.Entities
     {
       if (!principalParts.GenitiveSingular.EndsWith("us"))
       {
-        throw new NotImplementedException("Fourth declension noun not ending in -US not supported");
+        throw new NotSupportedException("Fourth declension noun not ending in -US not supported");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
       _gender = gender;

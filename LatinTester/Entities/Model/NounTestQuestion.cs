@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using CsharpUtils;
+using LatinTester.Entities.Base;
 using LatinTester.Enums;
 using LatinTester.Repository;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Model
 {
   public class NounTestQuestion
   {

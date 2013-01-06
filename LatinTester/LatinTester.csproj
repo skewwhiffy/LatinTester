@@ -53,6 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\Base\IConjugation.cs" />
+    <Compile Include="Entities\Base\Verb.cs" />
+    <Compile Include="Entities\PrincipalParts\VerbPrincipalParts.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\PresentIndicativeActiveRegular.cs" />
+    <Compile Include="Enums\Mood.cs" />
+    <Compile Include="Enums\Person.cs" />
+    <Compile Include="Enums\Tense.cs" />
+    <Compile Include="Enums\Voice.cs" />
     <Compile Include="Exceptions\GenderNotRecognizedException.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Repository\NounRepository.cs" />
@@ -64,16 +72,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Entities\NounDeclension5.cs" />
-    <Compile Include="Entities\NounDeclension4.cs" />
-    <Compile Include="Entities\NounTestQuestion.cs" />
+    <Compile Include="Entities\Impl\NounDeclension5.cs" />
+    <Compile Include="Entities\Impl\NounDeclension4.cs" />
+    <Compile Include="Entities\Model\NounTestQuestion.cs" />
     <Compile Include="Enums\Case.cs" />
-    <Compile Include="Entities\NounDeclension2.cs" />
+    <Compile Include="Entities\Impl\NounDeclension2.cs" />
     <Compile Include="Enums\Gender.cs" />
-    <Compile Include="Entities\Noun.cs" />
-    <Compile Include="Entities\NounDeclension1.cs" />
-    <Compile Include="Entities\NounDeclension3.cs" />
-    <Compile Include="Entities\NounPrincipalParts.cs" />
+    <Compile Include="Entities\Base\Noun.cs" />
+    <Compile Include="Entities\Impl\NounDeclension1.cs" />
+    <Compile Include="Entities\Impl\NounDeclension3.cs" />
+    <Compile Include="Entities\PrincipalParts\NounPrincipalParts.cs" />
     <Compile Include="Enums\Number.cs" />
     <Compile Include="NounCaseTester.xaml.cs">
       <DependentUpon>NounCaseTester.xaml</DependentUpon>

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.IO;
 using CsharpUtils;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Impl
 {
   public class NounDeclension3 : Noun
   {
@@ -11,7 +13,7 @@ namespace LatinTester.Entities
     {
       if (!principalParts.GenitiveSingular.EndsWith("is"))
       {
-        throw new NotImplementedException("Third declension nouns in genitive singular not ending in -IS not implemented");
+        throw new NotSupportedException("Third declension nouns in genitive singular not ending in -IS not implemented");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
       English = english;

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
+using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities
+namespace LatinTester.Entities.Impl
 {
   public class NounDeclension5 : Noun
   {
@@ -10,16 +12,16 @@ namespace LatinTester.Entities
     {
       if (!principalParts.GenitiveSingular.EndsWith("ei"))
       {
-        throw new NotImplementedException("Fifth declension noun with genitive singular not ending in -EI not supported");
+        throw new NotSupportedException("Fifth declension noun with genitive singular not ending in -EI not supported");
       }
       if (!principalParts.NominativeSingular.EndsWith("es"))
       {
-        throw new NotImplementedException("Fifth declension noun with nominative singular not ending in -ES not supported");
+        throw new NotSupportedException("Fifth declension noun with nominative singular not ending in -ES not supported");
       }
       _stem = principalParts.GenitiveSingular.Substring(0, principalParts.GenitiveSingular.Length - 2);
       if (_stem != principalParts.NominativeSingular.Substring(0, principalParts.NominativeSingular.Length - 2))
       {
-        throw new NotImplementedException("Fifth declension noun has different stem in nominative and genitive singular");
+        throw new NotSupportedException("Fifth declension noun has different stem in nominative and genitive singular");
       }
       _gender = gender;
       English = english;
