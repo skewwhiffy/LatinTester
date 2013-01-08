@@ -1,22 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CsharpUtils;
 using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities.Verbs.Conjugations
+namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
 {
-  public class PresentIndicativeActiveRegular : IConjugation
+  public class PresentIndicativeActive : IConjugation
   {
     private readonly string _baseStem;
     private readonly string _firstSingularInfix;
     private readonly string _normalInfix;
     private readonly string _thirdPluralInfix;
 
-    private PresentIndicativeActiveRegular(
+    private PresentIndicativeActive(
       string baseStem,
       string firstSingularInfix,
       string normalInfix,
@@ -28,45 +25,37 @@ namespace LatinTester.Entities.Verbs.Conjugations
       _thirdPluralInfix = thirdPluralInfix;
     }
 
-    public static PresentIndicativeActiveRegular Get1(string firstPersonSingular)
+    public static PresentIndicativeActive Get1(VerbPrincipalParts parts)
     {
-      firstPersonSingular = firstPersonSingular.ToLowerInvariant();
-      CheckEndsInO(firstPersonSingular);
-      return new PresentIndicativeActiveRegular(
-        firstPersonSingular.TruncateLastChars(1),
+      return new PresentIndicativeActive(
+        parts.Present.TruncateLastChars(1),
         string.Empty,
         "a",
         "a");
     }
 
-    public static PresentIndicativeActiveRegular Get2(string firstPersonSingular)
+    public static PresentIndicativeActive Get2(VerbPrincipalParts parts)
     {
-      firstPersonSingular = firstPersonSingular.ToLowerInvariant();
-      CheckEndsInO(firstPersonSingular);
-      return new PresentIndicativeActiveRegular(
-        firstPersonSingular.TruncateLastChars(1),
+      return new PresentIndicativeActive(
+        parts.Present.TruncateLastChars(1),
         string.Empty,
         string.Empty,
         string.Empty);
     }
 
-    public static PresentIndicativeActiveRegular Get3(string firstPersonSingular)
+    public static PresentIndicativeActive Get3(VerbPrincipalParts parts)
     {
-      firstPersonSingular = firstPersonSingular.ToLowerInvariant();
-      CheckEndsInO(firstPersonSingular);
-      return new PresentIndicativeActiveRegular(
-        firstPersonSingular.TruncateLastChars(1),
+      return new PresentIndicativeActive(
+        parts.Present.TruncateLastChars(1),
         string.Empty,
-        firstPersonSingular.EndsWith("io") ? string.Empty : "i",
+        parts.Present.EndsWith("io") ? string.Empty : "i",
         "u");
     }
 
-    public static PresentIndicativeActiveRegular Get4(string firstPersonSingular)
+    public static PresentIndicativeActive Get4(VerbPrincipalParts parts)
     {
-      firstPersonSingular = firstPersonSingular.ToLowerInvariant();
-      CheckEndsInO(firstPersonSingular);
-      return new PresentIndicativeActiveRegular(
-        firstPersonSingular.TruncateLastChars(1),
+      return new PresentIndicativeActive(
+        parts.Present.TruncateLastChars(1),
         string.Empty,
         string.Empty,
         "u");
@@ -125,14 +114,6 @@ namespace LatinTester.Entities.Verbs.Conjugations
           }
         default:
           throw new NotSupportedException(string.Format("unrecognised number : {0}", number));
-      }
-    }
-
-    private static void CheckEndsInO(string firstPersonSingular)
-    {
-      if (!firstPersonSingular.EndsWith("o"))
-      {
-        throw new NotSupportedException("First person singular present indicative active must end in o");
       }
     }
   }

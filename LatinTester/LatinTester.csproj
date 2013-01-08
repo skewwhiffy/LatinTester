@@ -56,7 +56,10 @@
     <Compile Include="Entities\Base\IConjugation.cs" />
     <Compile Include="Entities\Base\Verb.cs" />
     <Compile Include="Entities\PrincipalParts\VerbPrincipalParts.cs" />
-    <Compile Include="Entities\Verbs\Conjugations\PresentIndicativeActiveRegular.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Perfect.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Future.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Imperfect.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PresentIndicativeActive.cs" />
     <Compile Include="Enums\Mood.cs" />
     <Compile Include="Enums\Person.cs" />
     <Compile Include="Enums\Tense.cs" />

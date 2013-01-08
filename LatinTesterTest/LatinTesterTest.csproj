@@ -56,8 +56,11 @@
     <Compile Include="Entities\Impl\NounDeclension2Test.cs" />
     <Compile Include="Entities\Impl\NounDeclension1Test.cs" />
     <Compile Include="Entities\Impl\Base\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PerfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationTestBase.cs" />
-    <Compile Include="Entities\Verbs\Conjugations\PresentIndicativeActiveRegularTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FutureTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\ImperfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PresentIndicativeActiveTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

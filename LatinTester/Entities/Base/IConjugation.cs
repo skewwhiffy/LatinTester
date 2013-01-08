@@ -1,4 +1,5 @@
-﻿using LatinTester.Enums;
+﻿using LatinTester.Entities.PrincipalParts;
+using LatinTester.Enums;
 
 namespace LatinTester.Entities.Base
 {

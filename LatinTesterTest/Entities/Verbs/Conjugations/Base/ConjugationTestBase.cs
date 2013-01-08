@@ -2,12 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using LatinTester.Entities.Base;
+using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
 namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
 {
   public abstract class ConjugationTestBase
   {
+    protected readonly static VerbPrincipalParts INVALID =
+      new VerbPrincipalParts("doesNotEndInOActually", "notAnInfinitive", "notAPerfect", "notASupine");
+
+    protected static readonly VerbPrincipalParts AMO =
+      new VerbPrincipalParts("amo", "amare", "amavi", "amatum");
+    protected static readonly VerbPrincipalParts HABEO =
+      new VerbPrincipalParts("habeo", "habere", "habui", "habitum");
+
+    protected static readonly VerbPrincipalParts MITTO =
+      new VerbPrincipalParts("mitto", "mittere", "misi", "misum");
+
+    protected static readonly VerbPrincipalParts CAPIO =
+      new VerbPrincipalParts("capio", "capere", "cepi", "captum");
+
+    protected static readonly VerbPrincipalParts AUDIO =
+      new VerbPrincipalParts("audio", "audire", "audivi", "auditum");
+
     protected bool ConjugationWorks(
       IConjugation conj,
       string sing1,
