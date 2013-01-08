@@ -26,7 +26,20 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
     protected static readonly VerbPrincipalParts AUDIO =
       new VerbPrincipalParts("audio", "audire", "audivi", "auditum");
 
-    protected bool ConjugationWorks(
+    protected bool ConjugationWorks(IConjugation conj, string expected)
+    {
+      List<string> expectedSplit = expected.Split(',').Select(e => e.Trim().ToLowerInvariant()).ToList();
+      return ConjugationWorks(
+        conj,
+        expectedSplit[0],
+        expectedSplit[1],
+        expectedSplit[2],
+        expectedSplit[3],
+        expectedSplit[4],
+        expectedSplit[5]);
+    }
+
+    private bool ConjugationWorks(
       IConjugation conj,
       string sing1,
       string sing2,

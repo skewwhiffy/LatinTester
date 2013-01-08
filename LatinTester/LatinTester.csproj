@@ -56,16 +56,23 @@
     <Compile Include="Entities\Base\IConjugation.cs" />
     <Compile Include="Entities\Base\Verb.cs" />
     <Compile Include="Entities\PrincipalParts\VerbPrincipalParts.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FuturePerfect.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Pluperfect.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Perfect.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Future.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Imperfect.cs" />
-    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PresentIndicativeActive.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\Present.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\Imperfect.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\Present.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationEndings.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Base\PerfectStemBase.cs" />
     <Compile Include="Enums\Mood.cs" />
     <Compile Include="Enums\Person.cs" />
     <Compile Include="Enums\Tense.cs" />
     <Compile Include="Enums\Voice.cs" />
     <Compile Include="Exceptions\GenderNotRecognizedException.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\VerbHelper.cs" />
     <Compile Include="Repository\NounRepository.cs" />
     <Page Include="NounCaseTester.xaml">
       <Generator>MSBuild:Compile</Generator>

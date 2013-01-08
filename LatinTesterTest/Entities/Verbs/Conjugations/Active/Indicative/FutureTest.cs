@@ -10,66 +10,31 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void FirstConjugationWorks()
     {
-      Assert.IsTrue(
-        ConjugationWorks(Future.Get1(AMO),
-        "amabo",
-        "amabis",
-        "amabit",
-        "amabimus",
-        "amabitis",
-        "amabunt"));
+      Assert.IsTrue(ConjugationWorks(Future.Get1(AMO), "amabo, amabis, amabit, amabimus, amabitis, amabunt"));
     }
 
     [TestMethod]
     public void SecondConjugationWorks()
     {
-      Assert.IsTrue(
-        ConjugationWorks(Future.Get2(HABEO),
-        "habebo",
-        "habebis",
-        "habebit",
-        "habebimus",
-        "habebitis",
-        "habebunt"));
+      Assert.IsTrue(ConjugationWorks(Future.Get2(HABEO), "habebo, habebis, habebit, habebimus, habebitis, habebunt"));
     }
 
     [TestMethod]
     public void ThirdConjugationWorksWithoutIStem()
     {
-      Assert.IsTrue(
-        ConjugationWorks(Future.Get3(MITTO),
-        "mittam",
-        "mittes",
-        "mittet",
-        "mittemus",
-        "mittetis",
-        "mittent"));
+      Assert.IsTrue(ConjugationWorks(Future.Get3(MITTO), "mittam, mittes, mittet, mittemus, mittetis, mittent"));
     }
 
     [TestMethod]
     public void ThirdConjugationWorksWithIStem()
     {
-      Assert.IsTrue(
-        ConjugationWorks(Future.Get3(CAPIO),
-        "capiam",
-        "capies",
-        "capiet",
-        "capiemus",
-        "capietis",
-        "capient"));
+      Assert.IsTrue(ConjugationWorks(Future.Get3(CAPIO), "capiam, capies, capiet, capiemus, capietis, capient"));
     }
 
     [TestMethod]
     public void FourthConjugationWorks()
     {
-      Assert.IsTrue(
-        ConjugationWorks(Future.Get4(AUDIO),
-        "audiam",
-        "audies",
-        "audiet",
-        "audiemus",
-        "audietis",
-        "audient"));
+      Assert.IsTrue(ConjugationWorks(Future.Get4(AUDIO), "audiam, audies, audiet, audiemus, audietis, audient"));
     }
   }
 }
