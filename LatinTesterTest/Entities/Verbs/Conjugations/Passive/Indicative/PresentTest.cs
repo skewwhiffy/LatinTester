@@ -1,8 +1,8 @@
-﻿using LatinTester.Entities.Verbs.Conjugations.Active.Indicative;
+﻿using LatinTester.Entities.Verbs.Conjugations.Passive.Indicative;
 using LatinTesterTest.Entities.Verbs.Conjugations.Base;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
+namespace LatinTesterTest.Entities.Verbs.Conjugations.Passive.Indicative
 {
   [TestClass]
   public class PresentTest : ConjugationTestBase
@@ -12,7 +12,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void FirstConjugationWorks()
     {
-      AssertConjugationWorks(Present.Get1(AMO), "amo, amas, amat, amamus, amatis, amant");
+      AssertConjugationWorks(Present.Get1(AMO), "amor, amaris, amatur, amamur, amamini, amantur");
     }
 
     #endregion
@@ -22,7 +22,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void SecondConjugationWorks()
     {
-      AssertConjugationWorks(Present.Get2(HABEO), "habeo, habes, habet, habemus, habetis, habent");
+      AssertConjugationWorks(Present.Get2(HABEO), "habeor, haberis, habetur, habemur, habemini, habentur");
     }
 
     #endregion
@@ -32,13 +32,13 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void ThirdConjugationWorksWithoutIStem()
     {
-      AssertConjugationWorks(Present.Get3(MITTO), "mitto, mittis, mittit, mittimus, mittitis, mittunt");
+      AssertConjugationWorks(Present.Get3(MITTO), "mittor, mitteris, mittitur, mittimur, mittimini, mittuntur");
     }
 
     [TestMethod]
     public void ThirdConjugationWorksWithIStem()
     {
-      AssertConjugationWorks(Present.Get3(CAPIO), "capio, capis, capit, capimus, capitis, capiunt");
+      AssertConjugationWorks(Present.Get3(CAPIO), "capior, caperis, capitur, capimur, capimini, capiuntur");
     }
 
     #endregion
@@ -48,7 +48,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void FourthConjugationWorks()
     {
-      AssertConjugationWorks(Present.Get4(AUDIO), "audio, audis, audit, audimus, auditis, audiunt");
+      AssertConjugationWorks(Present.Get4(AUDIO), "audior, audiris, auditur, audimur, audimini, audiuntur");
     }
 
     #endregion

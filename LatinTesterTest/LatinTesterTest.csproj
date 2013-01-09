@@ -59,12 +59,15 @@
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FuturePerfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PluperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PerfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\PluperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\ImperfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\PerfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\PresentTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationTestBase.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FutureTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\ImperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PresentTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\PresentTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

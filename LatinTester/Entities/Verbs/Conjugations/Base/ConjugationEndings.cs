@@ -22,6 +22,19 @@ namespace LatinTester.Entities.Verbs.Conjugations.Base
       AddEntries(e0, e1, e2, e3, e4, e5);
     }
 
+    public string Ending(Person person, Number number)
+    {
+      if (!ContainsKey(number))
+      {
+        throw new NotSupportedException(string.Format("unrecognised number : {0}", number));
+      }
+      if (!this[number].ContainsKey(person))
+      {
+        throw new NotSupportedException(string.Format("unrecognised person : {0}", person));
+      }
+      return this[number][person];
+    }
+
     private void AddEntries(string e0, string e1, string e2, string e3, string e4, string e5)
     {
       Add(Number.Singular, new Dictionary<Person, string>

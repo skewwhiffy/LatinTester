@@ -4,6 +4,7 @@ using System.Linq;
 using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
 {
@@ -26,7 +27,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
     protected static readonly VerbPrincipalParts AUDIO =
       new VerbPrincipalParts("audio", "audire", "audivi", "auditum");
 
-    protected bool ConjugationWorks(IConjugation conj, string expected)
+    private static string ConjugationWorks(IConjugation conj, string expected)
     {
       List<string> expectedSplit = expected.Split(',').Select(e => e.Trim().ToLowerInvariant()).ToList();
       return ConjugationWorks(
@@ -39,7 +40,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
         expectedSplit[5]);
     }
 
-    private bool ConjugationWorks(
+    private static string ConjugationWorks(
       IConjugation conj,
       string sing1,
       string sing2,
@@ -58,12 +59,23 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
             {new Tuple<Person, Number>(Person.Second, Number.Plural), plu2},
             {new Tuple<Person, Number>(Person.Third, Number.Plural), plu3},
           };
-      return lookup.All(kvp => Agrees(conj, kvp.Key.Item1, kvp.Key.Item2, kvp.Value));
+      return string.Join("; ",
+                         lookup
+                           .Where(kvp => !Agrees(conj, kvp.Key.Item1, kvp.Key.Item2, kvp.Value))
+                           .Select(
+                             kvp =>
+                             string.Format("Expected '{0}', but got '{1}'", kvp.Value,
+                                           conj.Get(kvp.Key.Item1, kvp.Key.Item2))));
     }
 
-    protected bool Agrees(IConjugation conj, Person person, Number number, string value)
+    protected static bool Agrees(IConjugation conj, Person person, Number number, string value)
     {
       return conj.Get(person, number) == value;
+    }
+
+    protected static void AssertConjugationWorks(IConjugation conj, string expected)
+    {
+      Assert.AreEqual("", ConjugationWorks(conj, expected));
     }
   }
 }

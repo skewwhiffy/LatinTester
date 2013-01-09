@@ -10,34 +10,32 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Active.Indicative
     [TestMethod]
     public void FirstConjugationWorks()
     {
-      Assert.IsTrue(ConjugationWorks(Pluperfect.Get1(AMO),
-                                     "amaveram, amaveras, amaverat, amaveramus, amaveratis, amaverant"));
+      AssertConjugationWorks(Pluperfect.Get1(AMO), "amaveram, amaveras, amaverat, amaveramus, amaveratis, amaverant");
     }
 
     [TestMethod]
     public void SecondConjugationWorks()
     {
-      Assert.IsTrue(ConjugationWorks(Pluperfect.Get2(HABEO),
-                                     "habueram, habueras, habuerat, habueramus, habueratis, habuerant"));
+      AssertConjugationWorks(Pluperfect.Get2(HABEO), "habueram, habueras, habuerat, habueramus, habueratis, habuerant");
     }
 
     [TestMethod]
     public void ThirdConjugationWorksWithoutIStem()
     {
-      Assert.IsTrue(ConjugationWorks(Pluperfect.Get3(MITTO), "miseram, miseras, miserat, miseramus, miseratis, miserant"));
+      AssertConjugationWorks(Pluperfect.Get3(MITTO), "miseram, miseras, miserat, miseramus, miseratis, miserant");
     }
 
     [TestMethod]
     public void ThirdConjugationWorksWithIStem()
     {
-      Assert.IsTrue(ConjugationWorks(Pluperfect.Get3(CAPIO), "ceperam, ceperas, ceperat, ceperamus, ceperatis, ceperant"));
+      AssertConjugationWorks(Pluperfect.Get3(CAPIO), "ceperam, ceperas, ceperat, ceperamus, ceperatis, ceperant");
     }
 
     [TestMethod]
     public void FourthConjugationWorks()
     {
-      Assert.IsTrue(ConjugationWorks(Pluperfect.Get4(AUDIO),
-                                     "audiveram, audiveras, audiverat, audiveramus, audiveratis, audiverant"));
+      AssertConjugationWorks(Pluperfect.Get4(AUDIO),
+                             "audiveram, audiveras, audiverat, audiveramus, audiveratis, audiverant");
     }
   }
 }
