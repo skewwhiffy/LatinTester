@@ -17,17 +17,21 @@ namespace LatinTester.Entities.Verbs.Conjugations.Passive.Indicative
     private readonly string _stem;
     private readonly string _firstSingularInfix;
     private readonly string _secondSingularInfix;
+    private readonly string _usualInfix;
+    private readonly string _thirdPluralInfix;
 
     private Present(
       string stem,
-      string firstSingularInfix,
+      string firstSingularInfix = "",
       string secondSingularInfix = null,
       string usualInfix = null,
       string thirdPluralInfix = null)
     {
       _stem = stem;
       _firstSingularInfix = firstSingularInfix;
-      _secondSingularInfix = secondSingularInfix;
+      _secondSingularInfix = secondSingularInfix ?? _firstSingularInfix;
+      _usualInfix = usualInfix ?? _secondSingularInfix;
+      _thirdPluralInfix = thirdPluralInfix ?? _usualInfix;
     }
 
     public static IConjugation Get1(VerbPrincipalParts parts)
@@ -37,17 +41,21 @@ namespace LatinTester.Entities.Verbs.Conjugations.Passive.Indicative
 
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
-      throw new NotImplementedException();
+      return new Present(parts.Present.TruncateLastChars(1));
     }
 
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
-      throw new NotImplementedException();
+      if (parts.Present.EndsWith("io"))
+      {
+        return new Present(parts.Present.TruncateLastChars(2), "i", "e", "i", "iu");
+      }
+      return new Present(parts.Present.TruncateLastChars(1), "", "e", "i", "u");
     }
 
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
-      throw new NotImplementedException();
+      return new Present(parts.Present.TruncateLastChars(1), "", "", "", "u");
     }
 
     public string Get(Person person, Number number)
@@ -61,7 +69,15 @@ namespace LatinTester.Entities.Verbs.Conjugations.Passive.Indicative
       {
         return _firstSingularInfix;
       }
-      return _secondSingularInfix;
+      if (person == Person.Second && number == Number.Singular)
+      {
+        return _secondSingularInfix;
+      }
+      if (person == Person.Third && number == Number.Plural)
+      {
+        return _thirdPluralInfix;
+      }
+      return _usualInfix;
     }
 
     private static readonly ConjugationEndings ENDINGS = new ConjugationEndings("or, ris, tur, mur, mini, ntur");
