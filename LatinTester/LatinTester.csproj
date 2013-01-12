@@ -68,6 +68,9 @@
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\Present.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationEndings.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Base\PerfectStemBase.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Irregular\Conjugation.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Irregular\Sum.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\Imperfect.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\Present.cs" />
     <Compile Include="Enums\Mood.cs" />
     <Compile Include="Enums\Person.cs" />
