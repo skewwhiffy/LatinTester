@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using LatinTester.Entities;
-using LatinTester.Entities.Base;
-using LatinTester.Entities.Impl;
+using LatinTester.Entities.Nouns;
+using LatinTester.Entities.Nouns.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 

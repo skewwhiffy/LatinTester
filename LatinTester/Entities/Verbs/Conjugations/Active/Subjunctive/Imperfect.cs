@@ -1,9 +1,6 @@
-﻿using CsharpUtils;
-using LatinTester.Entities.Base;
-using LatinTester.Entities.PrincipalParts;
+﻿using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
-using LatinTester.Helpers;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Subjunctive
 {

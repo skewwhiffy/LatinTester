@@ -1,5 +1,4 @@
-﻿using LatinTester.Entities.Base;
-using LatinTester.Entities.Verbs.Conjugations.Base;
+﻿using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Irregular

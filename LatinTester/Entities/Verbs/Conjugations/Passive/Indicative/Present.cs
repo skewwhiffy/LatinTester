@@ -1,5 +1,4 @@
 ﻿using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
@@ -30,26 +29,26 @@ namespace LatinTester.Entities.Verbs.Conjugations.Passive.Indicative
 
     public static IConjugation Get1(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), "", "a");
+      return new Present(parts.Present.TruncateEnding("o"), "", "a");
     }
 
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1));
+      return new Present(parts.Present.TruncateEnding("o"));
     }
 
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
       if (parts.Present.EndsWith("io"))
       {
-        return new Present(parts.Present.TruncateLastChars(2), "i", "e", "i", "iu");
+        return new Present(parts.Present.TruncateEnding("io"), "i", "e", "i", "iu");
       }
-      return new Present(parts.Present.TruncateLastChars(1), "", "e", "i", "u");
+      return new Present(parts.Present.TruncateEnding("o"), "", "e", "i", "u");
     }
 
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), "", "", "", "u");
+      return new Present(parts.Present.TruncateEnding("o"), "", "", "", "u");
     }
 
     public string Get(Person person, Number number)

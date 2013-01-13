@@ -1,5 +1,4 @@
-﻿using LatinTester.Entities.Base;
-using LatinTester.Entities.PrincipalParts;
+﻿using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
@@ -27,7 +26,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
     {
       return new Pluperfect(parts);
     }
-    
+
     protected override ConjugationEndings Endings
     {
       get { return ENDINGS; }

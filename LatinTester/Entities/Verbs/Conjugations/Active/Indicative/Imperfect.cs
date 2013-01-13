@@ -1,9 +1,7 @@
 ﻿using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
-using LatinTester.Helpers;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
 {
@@ -16,26 +14,29 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
       _stem = stem;
     }
 
+    private static IConjugation Get12(VerbPrincipalParts parts)
+    {
+      return new Imperfect(parts.Infinitive.TruncateEnding("re"));
+    }
+
     public static IConjugation Get1(VerbPrincipalParts parts)
     {
-      return new Imperfect(parts.Infinitive.TruncateLastChars(2));
+      return Get12(parts);
     }
 
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
-      return new Imperfect(parts.Infinitive.TruncateLastChars(2));
+      return Get12(parts);
     }
 
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
-      return parts.Present.EndsWith("io")
-               ? new Imperfect(parts.Present.TruncateLastChars(1) + "e")
-               : new Imperfect(parts.Infinitive.TruncateLastChars(2));
+      return new Imperfect(parts.Present.TruncateEnding("o") + "e");
     }
 
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
-      return new Imperfect(parts.Infinitive.TruncateLastChars(2) + "e");
+      return new Imperfect(parts.Infinitive.TruncateEnding("re") + "e");
     }
 
     public string Get(Person person, Number number)

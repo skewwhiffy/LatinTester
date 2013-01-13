@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entities.Base;
+using LatinTester.Entities.Nouns.Base;
 using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entities.Impl.Base
+namespace LatinTesterTest.Entities.Nouns.Base
 {
   public abstract class NounDeclensionTestBase
   {

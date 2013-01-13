@@ -1,9 +1,7 @@
 ﻿using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
-using LatinTester.Helpers;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
 {
@@ -29,7 +27,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
     public static IConjugation Get1(VerbPrincipalParts parts)
     {
       return new Present(
-        parts.Present.TruncateLastChars(1),
+        parts.Present.TruncateEnding("o"),
         string.Empty,
         "a",
         "a");
@@ -38,7 +36,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
       return new Present(
-        parts.Present.TruncateLastChars(1),
+        parts.Present.TruncateEnding("o"),
         string.Empty,
         string.Empty,
         string.Empty);
@@ -47,7 +45,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
       return new Present(
-        parts.Present.TruncateLastChars(1),
+        parts.Present.TruncateEnding("o"),
         string.Empty,
         parts.Present.EndsWith("io") ? string.Empty : "i",
         "u");
@@ -56,7 +54,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
       return new Present(
-        parts.Present.TruncateLastChars(1),
+        parts.Present.TruncateEnding("o"),
         string.Empty,
         string.Empty,
         "u");

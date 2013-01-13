@@ -4,7 +4,7 @@ using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 using LatinTester.Helpers;
 
-namespace LatinTester.Entities.Base
+namespace LatinTester.Entities.Nouns.Base
 {
   public abstract class Noun
   {

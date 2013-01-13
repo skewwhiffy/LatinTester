@@ -50,12 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Entities\Impl\NounDeclension5Test.cs" />
-    <Compile Include="Entities\Impl\NounDeclension4Test.cs" />
-    <Compile Include="Entities\Impl\NounDeclension3Test.cs" />
-    <Compile Include="Entities\Impl\NounDeclension2Test.cs" />
-    <Compile Include="Entities\Impl\NounDeclension1Test.cs" />
-    <Compile Include="Entities\Impl\Base\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\Nouns\NounDeclension5Test.cs" />
+    <Compile Include="Entities\Nouns\NounDeclension4Test.cs" />
+    <Compile Include="Entities\Nouns\NounDeclension3Test.cs" />
+    <Compile Include="Entities\Nouns\NounDeclension2Test.cs" />
+    <Compile Include="Entities\Nouns\NounDeclension1Test.cs" />
+    <Compile Include="Entities\Nouns\Base\NounDeclensionTestBase.cs" />
+    <Compile Include="Entities\PrincipalParts\VerbPrincipalPartsTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FuturePerfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PluperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PerfectTest.cs" />
@@ -63,13 +64,24 @@
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\ImperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\PerfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Subjunctive\PresentTest.cs" />
-    <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationTestBase.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Base\ConjugationBaseTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\NonFinite\ParticiplesTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\TestBase\ConjugationTestBase.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\FutureTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\ImperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Active\Indicative\PresentTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Irregular\SumTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\NonFinite\InfinitivesTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\FuturePerfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\PluperfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\PerfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\FutureTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\ImperfectTest.cs" />
     <Compile Include="Entities\Verbs\Conjugations\Passive\Indicative\PresentTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Subjunctive\PluperfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Subjunctive\ImperfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Subjunctive\PerfectTest.cs" />
+    <Compile Include="Entities\Verbs\Conjugations\Passive\Subjunctive\PresentTest.cs" />
     <Compile Include="Helpers\EnumHelperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

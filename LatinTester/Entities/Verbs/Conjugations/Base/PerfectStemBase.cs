@@ -1,6 +1,5 @@
 ﻿using System;
 using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
@@ -12,7 +11,7 @@ namespace LatinTester.Entities.Verbs.Conjugations.Base
 
     protected PerfectStemBase(VerbPrincipalParts parts)
     {
-      _stem = parts.Perfect.TruncateLastChars(1);
+      _stem = parts.Perfect.TruncateEnding("i");
     }
 
     public string Get(Person person, Number number)

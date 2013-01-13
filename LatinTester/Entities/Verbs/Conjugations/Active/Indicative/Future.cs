@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
-using LatinTester.Helpers;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
 {
@@ -26,24 +24,34 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
       _stem = stem;
     }
 
+    private static IConjugation Get12(VerbPrincipalParts parts)
+    {
+      return new Future(parts.Infinitive.TruncateEnding("re"), Endings.Bo);
+    }
+
+    private static IConjugation Get34(VerbPrincipalParts parts)
+    {
+      return new Future(parts.Present.TruncateEnding("o"), Endings.Am);
+    }
+
     public static IConjugation Get1(VerbPrincipalParts parts)
     {
-      return new Future(parts.Infinitive.TruncateLastChars(2), Endings.Bo);
+      return Get12(parts);
     }
 
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
-      return new Future(parts.Infinitive.TruncateLastChars(2), Endings.Bo);
+      return Get12(parts);
     }
 
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
-      return new Future(parts.Present.TruncateLastChars(1), Endings.Am);
+      return Get34(parts);
     }
 
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
-      return new Future(parts.Infinitive.TruncateLastChars(2), Endings.Am);
+      return Get34(parts);
     }
 
     public string Get(Person person, Number number)

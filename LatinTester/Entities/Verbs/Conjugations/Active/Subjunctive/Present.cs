@@ -1,9 +1,7 @@
 ﻿using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
-using LatinTester.Helpers;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Subjunctive
 {
@@ -17,29 +15,29 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Subjunctive
 
     private readonly string _stem;
 
-    private Present(string stem, Endings endings)
+    private Present(VerbPrincipalParts parts, Endings endings = Endings.Am)
     {
-      _stem = string.Format("{0}{1}", stem, endings == Endings.Em ? "e" : "a");
+      _stem = string.Format("{0}{1}", parts.Present.TruncateEnding("o"), endings == Endings.Em ? "e" : "a");
     }
 
     public static IConjugation Get1(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), Endings.Em);
+      return new Present(parts, Endings.Em);
     }
 
     public static IConjugation Get2(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), Endings.Am);
+      return new Present(parts);
     }
 
     public static IConjugation Get3(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), Endings.Am);
+      return new Present(parts);
     }
 
     public static IConjugation Get4(VerbPrincipalParts parts)
     {
-      return new Present(parts.Present.TruncateLastChars(1), Endings.Am);
+      return new Present(parts);
     }
 
     public string Get(Person person, Number number)

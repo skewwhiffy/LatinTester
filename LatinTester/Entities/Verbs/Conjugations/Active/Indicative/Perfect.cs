@@ -1,5 +1,4 @@
-﻿using LatinTester.Entities.Base;
-using LatinTester.Entities.PrincipalParts;
+﻿using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
@@ -28,7 +27,10 @@ namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative
       return new Perfect(parts);
     }
 
-    protected override ConjugationEndings Endings { get { return ENDINGS; } }
+    protected override ConjugationEndings Endings
+    {
+      get { return ENDINGS; }
+    }
 
     private static readonly ConjugationEndings ENDINGS = new ConjugationEndings("i, isti, it, imus, istis, erunt");
   }

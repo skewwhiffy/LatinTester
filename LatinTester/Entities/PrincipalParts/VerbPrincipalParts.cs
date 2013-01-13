@@ -1,5 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using CsharpUtils;
+using LatinTester.Enums;
 
 namespace LatinTester.Entities.PrincipalParts
 {
@@ -8,16 +11,44 @@ namespace LatinTester.Entities.PrincipalParts
 
     public VerbPrincipalParts(string present, string infinitive, string perfect, string supine)
     {
-      Present = present;
-      Infinitive = infinitive;
-      Perfect = perfect;
-      Supine = supine;
+      Present = present.ToLowerInvariant();
+      Infinitive = infinitive.ToLowerInvariant();
+      Perfect = perfect.ToLowerInvariant();
+      Supine = supine.ToLowerInvariant();
     }
 
     public string Present { get; private set; }
     public string Infinitive { get; private set; }
     public string Perfect { get; private set; }
     public string Supine { get; private set; }
+    public string FutureParticiple
+    {
+      get { return string.Format("{0}{1}", Supine.TruncateLastChars(2), "urus"); }
+    }
+
+    public Conjugation Conjugation
+    {
+      get
+      {
+        if (Infinitive.EndsWith("are"))
+        {
+          return Conjugation.First;
+        }
+        if (Present.EndsWith("eo"))
+        {
+          return Conjugation.Second;
+        }
+        if (Infinitive.EndsWith("ere"))
+        {
+          return Conjugation.Third;
+        }
+        if (Infinitive.EndsWith("ire"))
+        {
+          return Conjugation.Fourth;
+        }
+        throw new NotSupportedException(string.Format("Cannot recognise conjugation of {0}", ToString()));
+      }
+    }
 
     public override bool Equals(object obj)
     {

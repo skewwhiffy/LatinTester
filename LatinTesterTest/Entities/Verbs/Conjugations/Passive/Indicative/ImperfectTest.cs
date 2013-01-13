@@ -1,5 +1,5 @@
 ﻿using LatinTester.Entities.Verbs.Conjugations.Passive.Indicative;
-using LatinTesterTest.Entities.Verbs.Conjugations.Base;
+using LatinTesterTest.Entities.Verbs.Conjugations.TestBase;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace LatinTesterTest.Entities.Verbs.Conjugations.Passive.Indicative

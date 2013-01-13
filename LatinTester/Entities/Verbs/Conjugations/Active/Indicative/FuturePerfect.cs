@@ -1,5 +1,4 @@
-﻿using LatinTester.Entities.Base;
-using LatinTester.Entities.PrincipalParts;
+﻿using LatinTester.Entities.PrincipalParts;
 using LatinTester.Entities.Verbs.Conjugations.Base;
 
 namespace LatinTester.Entities.Verbs.Conjugations.Active.Indicative

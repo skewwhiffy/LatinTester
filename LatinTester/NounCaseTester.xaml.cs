@@ -5,8 +5,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using CsharpUtils;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.Model;
+using LatinTester.Entities.Nouns.Base;
 using LatinTester.Enums;
 
 namespace LatinTester

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
-using LatinTester.Entities.Base;
+using LatinTester.Entities.Nouns.Base;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
 
-namespace LatinTester.Entities.Impl
+namespace LatinTester.Entities.Nouns
 {
   public class NounDeclension5 : Noun
   {

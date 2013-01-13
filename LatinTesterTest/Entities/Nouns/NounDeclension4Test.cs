@@ -1,20 +1,19 @@
 ﻿using System.Collections.Generic;
-using LatinTester.Entities.Base;
-using LatinTester.Entities.Impl;
+using LatinTester.Entities.Nouns;
 using LatinTester.Entities.PrincipalParts;
 using LatinTester.Enums;
-using LatinTesterTest.Entities.Impl.Base;
+using LatinTesterTest.Entities.Nouns.Base;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entities.Impl
+namespace LatinTesterTest.Entities.Nouns
 {
   [TestClass]
   public class NounDeclension4Test : NounDeclensionTestBase
   {
     #region Set up
 
-    private Noun _portus;
-    private Noun _cornu;
+    private LatinTester.Entities.Nouns.Base.Noun _portus;
+    private LatinTester.Entities.Nouns.Base.Noun _cornu;
 
     [TestInitialize]
     public void SetUp()

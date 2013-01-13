@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using LatinTester.Entities.Base;
 using LatinTester.Entities.PrincipalParts;
+using LatinTester.Entities.Verbs.Conjugations.Base;
 using LatinTester.Enums;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
+namespace LatinTesterTest.Entities.Verbs.Conjugations.TestBase
 {
   public abstract class ConjugationTestBase
   {
@@ -19,7 +19,7 @@ namespace LatinTesterTest.Entities.Verbs.Conjugations.Base
       new VerbPrincipalParts("habeo", "habere", "habui", "habitum");
 
     protected static readonly VerbPrincipalParts MITTO =
-      new VerbPrincipalParts("mitto", "mittere", "misi", "misum");
+      new VerbPrincipalParts("mitto", "mittere", "misi", "missum");
 
     protected static readonly VerbPrincipalParts CAPIO =
       new VerbPrincipalParts("capio", "capere", "cepi", "captum");

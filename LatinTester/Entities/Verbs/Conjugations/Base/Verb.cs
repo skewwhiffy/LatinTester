@@ -1,6 +1,6 @@
 ﻿using LatinTester.Entities.PrincipalParts;
 
-namespace LatinTester.Entities.Base
+namespace LatinTester.Entities.Verbs.Conjugations.Base
 {
   public abstract class Verb
   {
